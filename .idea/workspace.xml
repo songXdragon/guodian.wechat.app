@@ -21,22 +21,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6173913">
-              <caret line="156" column="44" selection-start-line="156" selection-start-column="44" selection-end-line="156" selection-end-column="44" />
+            <state vertical-scroll-proportion="-3.6065574">
+              <caret line="52" column="36" selection-start-line="52" selection-start-column="29" selection-end-line="52" selection-end-column="36" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="businessHall.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="businessHall.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/businessHall.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="21" column="38" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
-              <folding />
+            <state vertical-scroll-proportion="0.6189377">
+              <caret line="92" column="21" selection-start-line="92" selection-start-column="12" selection-end-line="92" selection-end-column="21" />
+              <folding>
+                <element signature="e#1062#1507#0" expanded="false" />
+                <element signature="e#1556#2096#0" expanded="false" />
+                <element signature="e#2144#2210#0" expanded="false" />
+                <element signature="e#3184#5034#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -74,8 +79,8 @@
         <option value="$PROJECT_DIR$/myBill.html" />
         <option value="$PROJECT_DIR$/js/weui-dialog.js" />
         <option value="$PROJECT_DIR$/js/myBill.js" />
-        <option value="$PROJECT_DIR$/js/businessHall.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/js/businessHall.js" />
       </list>
     </option>
   </component>
@@ -242,7 +247,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1034" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1034" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24947257" sideWeight="0.4957265" order="0" side_tool="false" content_ui="combo" />
@@ -298,7 +303,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
-          <folding />
+          <folding>
+            <element signature="e#1062#1507#0" expanded="false" />
+            <element signature="e#1556#2096#0" expanded="false" />
+            <element signature="e#2144#2210#0" expanded="false" />
+            <element signature="e#3184#5034#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -355,7 +365,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
-          <folding />
+          <folding>
+            <element signature="e#1062#1507#0" expanded="false" />
+            <element signature="e#1556#2096#0" expanded="false" />
+            <element signature="e#2144#2210#0" expanded="false" />
+            <element signature="e#3184#5034#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -412,7 +427,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="36" column="35" selection-start-line="36" selection-start-column="35" selection-end-line="36" selection-end-column="35" />
-          <folding />
+          <folding>
+            <element signature="e#1062#1507#0" expanded="false" />
+            <element signature="e#1556#2096#0" expanded="false" />
+            <element signature="e#2144#2210#0" expanded="false" />
+            <element signature="e#3184#5034#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -448,7 +468,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#1062#1507#0" expanded="false" />
+            <element signature="e#1556#2096#0" expanded="false" />
+            <element signature="e#2144#2210#0" expanded="false" />
+            <element signature="e#3184#5034#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -464,7 +489,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="14" column="32" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="32" />
-          <folding />
+          <folding>
+            <element signature="e#1062#1507#0" expanded="false" />
+            <element signature="e#1556#2096#0" expanded="false" />
+            <element signature="e#2144#2210#0" expanded="false" />
+            <element signature="e#3184#5034#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -561,19 +591,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/businessHall.js">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="38" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
+        <state vertical-scroll-proportion="-3.6065574">
+          <caret line="52" column="36" selection-start-line="52" selection-start-column="29" selection-end-line="52" selection-end-column="36" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/js/businessHall.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6173913">
-          <caret line="156" column="44" selection-start-line="156" selection-start-column="44" selection-end-line="156" selection-end-column="44" />
-          <folding />
+        <state vertical-scroll-proportion="0.6189377">
+          <caret line="92" column="21" selection-start-line="92" selection-start-column="12" selection-end-line="92" selection-end-column="21" />
+          <folding>
+            <element signature="e#1062#1507#0" expanded="false" />
+            <element signature="e#1556#2096#0" expanded="false" />
+            <element signature="e#2144#2210#0" expanded="false" />
+            <element signature="e#3184#5034#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

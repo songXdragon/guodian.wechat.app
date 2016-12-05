@@ -50,7 +50,7 @@
 		</ul>
 		<div class="row-2 clearfix" id="userInfo">
 			<div class="row-2-item">
-				<address class="ellipsis-2">地址：武汉市洪山区武汉市洪山区武汉市洪武汉市洪山区武汉市洪山区武汉</address>
+				<address id="bh_addr" class="ellipsis-2">地址：武汉市洪山区武汉市洪山区武汉市洪武汉市洪山区武汉市洪山区武汉</address>
 				<div class="balance">
 					<span>可用余额</span>
 					<span class="red-1">¥2.00</span>
@@ -147,6 +147,7 @@
 	<script src="js/common.js"></script>
 	<script>
 		$(document).ready(function() {
+			setSVGImg();
 			var bh = new businessHall();
 			bh.init();
 		});
@@ -155,87 +156,6 @@
 		//消息滚动
 		$(function() { 
 			$('.newsMarquee').newsMarquee();
-		});
-
-		//切换户名和户号
-		var setSwtichForConsNo = function(){
-			var $userNumber = $('#userNumber'),
-					$firstLi = $userNumber.find('li:eq(0)'),
-					$firstCode = $firstLi.find('.houseCode'),
-					$firstName = $firstLi.find('.houseName'),
-					isVisible = false;
-
-			$userNumber.on("click", 'li', function(e){
-				var $this = $(this),
-						selectedCode = $this.find('.houseCode').text(),
-						selectedName = $this.find('.houseName').text();
-				if (isVisible) {
-					if (selectedCode !== $firstCode.text()) {
-						$firstCode.text(selectedCode);
-						$firstName.text(selectedName);
-					}
-					$firstLi.removeClass('first').siblings().slideUp(200); //第一个li增加first类名，其它li收起来
-					isVisible = false;
-				} else {
-					$firstLi.addClass('first').siblings().slideDown(200); //第一个li移除first类名，其它li展开
-					isVisible = true;
-				}
-			});
-		};
-
-		//加载svg并设置指针角度
-		$(function() {
-			var $svgLoader = $('#svgLoader'),
-				src = $svgLoader.data('src');
-			$.ajax({
-				url: src,
-				dataType: 'xml',
-				success: function(content) {
-					var doc = content.documentElement;
-					$svgLoader.after(doc).remove();
-
-					//设置头部第2行左边与右边一样高
-					var $header_mainInfo_div = $('#userInfo .row-2-item'),
-						dashboardArea_h = $header_mainInfo_div.eq(1).height();
-					$header_mainInfo_div.eq(0).height(dashboardArea_h);
-
-					//svg加载完成后，设置列表的行高
-					var li_h = Math.ceil($('.header').height() / $('#userNumber li').length),
-						$userNumber = $('#userNumber');
-					$userNumber.find('li').css('line-height', (li_h > 100 ? 100 : li_h) + 'px');
-				},
-				error: function(error) { 
-					console.log(error);
-				}
-			}).done(function() { 
-				var setPointerState = function(deg) { 
-					deg = parseInt(deg);
-					if (typeof deg === 'number') { 
-						if (deg >= 0 && deg <= 54) { 
-							$('#dashboard-pointer path').css('fill', '#0ABA66');
-						}
-						if (deg > 54 && deg <=216) { 
-							$('#dashboard-pointer path').css('fill', '#f3a826');
-						}
-						if (deg > 216 && deg <= 270) { 
-							$('#dashboard-pointer path').css('fill', '#ff4646');
-						}
-						if (deg >= 0 && deg <= 270) { 
-							$('#dashboard-pointer').css({ 
-								'-webkit-transform': 'rotate(' + deg + 'deg)',
-								'transform': 'rotate(' + deg + 'deg)'
-							});
-						}
-					}
-				};
-				/*
-				 *根据参数设置指针角度
-				 *指针的角度介于0－270度之间
-				*/
-				setTimeout(function() { 
-					setPointerState(162);
-				}, 100);
-			})
 		});
 	</script>
 </body>
