@@ -104,7 +104,7 @@ var setSwtichForConsNo = function(){
     });
 };
 
-var setSVGImg = function(){
+var setSVGImg = function(pointAngle){
     var $svgLoader = $('#svgLoader'),
         src = $svgLoader.data('src');
     $.ajax({
@@ -153,7 +153,7 @@ var setSVGImg = function(){
          *指针的角度介于0－270度之间
          */
         setTimeout(function() {
-            setPointerState(162);
+            setPointerState(pointAngle);
         }, 100);
     })
 };

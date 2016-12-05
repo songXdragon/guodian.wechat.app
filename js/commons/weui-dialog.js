@@ -51,7 +51,7 @@
             closeFcn: function() {
                 return true;
             }
-        }
+        };
         this.options = $.extend({}, this.defaults, opt);
         init(this.options);
     };

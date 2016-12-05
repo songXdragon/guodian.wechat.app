@@ -140,14 +140,14 @@
 	</div>
 
 	<script src="bower_components/jquery/dist/jquery.min.js"></script>
-	<script src="js/newsMarquee.js"></script>
+	<script src="js/commons/newsMarquee.js"></script>
+	<script src="js/commons/weui-dialog.js"></script>
+	<script src="js/commons/common.js"></script>
 
-	<script src="js/weui-dialog.js"></script>
 	<script src="js/businessHall.js"></script>
-	<script src="js/common.js"></script>
 	<script>
 		$(document).ready(function() {
-			setSVGImg();
+			setSVGImg(0);
 			var bh = new businessHall();
 			bh.init();
 		});
