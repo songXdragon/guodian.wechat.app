@@ -2,9 +2,9 @@
  * Created by waima00 on 2016/12/4.
  */
 /**
- * »ùÓÚweuiºÍjQueryµÄ¶Ô»°¿ò²å¼ş
- * °æ±¾£º1.1
- * ×÷Õß£ºNineTeen
+ * åŸºäºweuiå’ŒjQueryçš„å¯¹è¯æ¡†æ’ä»¶
+ * ç‰ˆæœ¬ï¼š1.1
+ * ä½œè€…ï¼šNineTeen
  *
  */
 
@@ -12,36 +12,36 @@
 (function($, window, document, undefined) {
     /*-----------------------------------------------------------
      * |                                                        |
-     * |                        È«¾Ö±äÁ¿                            |
+     * |                        å…¨å±€å˜é‡                            |
      * |                                                        |
      * ----------------------------------------------------------
      */
-    var _this; //²å¼ş¶ÔÏó
-    var that; //²å¼ş¸¸ÔªËØ
+    var _this; //æ’ä»¶å¯¹è±¡
+    var that; //æ’ä»¶çˆ¶å…ƒç´ 
 
-    //dialog Ä£°æ DOMÊ÷
-    var dialogModel = '<div class="weui_dialog_alert" id="dialog" style="display:none ;">' +
-        '<div class="weui_mask"></div>' +
-        '<div class="weui_dialog">' +
-        '<div class="weui_dialog_hd"><strong class="weui_dialog_title" data-title=""></strong></div>' +
-        '<div class="weui_dialog_bd" data-content=""></div>' +
-        '<div class="weui_dialog_ft">' +
-        '<a href="javascript:;" class="weui_btn_dialog default " data-cancle="" alt="cancle"></a>' +
-        '<a href="javascript:;" class="weui_btn_dialog primary " data-ok="" alt="ok"></a>' +
+    //dialog æ¨¡ç‰ˆ DOMæ ‘
+    var dialogModel = '<div class="js_dialog" id="dialog" style="display:none ;">' +
+        '<div class="weui-mask"></div>' +
+        '<div class="weui-dialog">' +
+        '<div class="weui-dialog__hd"><strong class="weui-dialog__title" data-title=""></strong></div>' +
+        '<div class="weui-dialog__bd" data-content=""></div>' +
+        '<div class="weui-dialog__ft">' +
+        '<a href="javascript:;" class="weui-dialog__btn weui-dialog__btn_default " data-cancle="" alt="cancle"></a>' +
+        '<a href="javascript:;" class="weui-dialog__btn weui-dialog__btn_primary " data-ok="" alt="ok"></a>' +
         '</div></div></div>';
 
     /*-----------------------------------------------------------
      * |                                                        |
-     * |                        ¹¹Ôìº¯Êı                            |
+     * |                        æ„é€ å‡½æ•°                            |
      * |                                                        |
      * ----------------------------------------------------------
      */
     var Dialog = function(opt) {
         this.defaults = {
-            title: "Dialog±êÌâ",
-            content: "DialogÌáÊ¾ÄÚÈİ",
-            ok: "È·¶¨",
-            cancle: "È¡Ïû",
+            title: "Dialogæ ‡é¢˜",
+            content: "Dialogæç¤ºå†…å®¹",
+            ok: "ç¡®å®š",
+            cancle: "å–æ¶ˆ",
             okFcn: function() {
                 return true;
             },
@@ -58,12 +58,12 @@
 
     /*-----------------------------------------------------------
      * |                                                        |
-     * |                        Ë½ÓĞ·½·¨                            |
+     * |                        ç§æœ‰æ–¹æ³•                            |
      * |                                                        |
      * ----------------------------------------------------------
      */
 
-    //Ìí¼ÓDOM
+    //æ·»åŠ DOM
     function add() {
         $("#dialog").remove();
         if(that.html() == undefined) {
@@ -72,7 +72,7 @@
             that.append(dialogModel);
         }
     }
-    //²å¼ş³õÊ¼»¯
+    //æ’ä»¶åˆå§‹åŒ–
     function init(ops) {
         add();
         $.each(ops, function(key, value) {
@@ -87,7 +87,7 @@
         bind();
     }
 
-    //ÊÂ¼ş°ó¶¨
+    //äº‹ä»¶ç»‘å®š
     function bind() {
         $("#dialog a[data-ok],#dialog a[data-cancle]").on("click", function(e) {
             if(typeof _this.options[$(e.target).attr("alt") + "Fcn"] == "function") {
@@ -105,30 +105,30 @@
 
     /*-----------------------------------------------------------
      * |                                                        |
-     * |                        ¹«ÓĞ·½·¨                            |
+     * |                        å…¬æœ‰æ–¹æ³•                            |
      * |                                                        |
      * ----------------------------------------------------------
      */
     Dialog.prototype = {
-        //ÏÔÊ¾
+        //æ˜¾ç¤º
         show: function() {
             $("#dialog").show();
         },
-        //¹Ø±Õ
+        //å…³é—­
         close: function() {
             $("#dialog").hide();
             this.options["closeFcn"]();
         },
-        //ÒÆ³ıdom
+        //ç§»é™¤dom
         remove: function() {
             $("#dialog").remove();
         },
-        //ÉèÖÃ±êÌâ
+        //è®¾ç½®æ ‡é¢˜
         title: function(v) {
             this.options['title'] = v;
             init(this.options);
         },
-        //ÉèÖÃÄÚÈİ
+        //è®¾ç½®å†…å®¹
         content: function(v) {
             this.options['content'] = v;
             init(this.options);
@@ -136,7 +136,7 @@
 
     };
 
-    //²å¼şÖ÷Ìå
+    //æ’ä»¶ä¸»ä½“
     $.fn.weuiDialog = function(options) {
         that = $(this);
         _this = new Dialog(options);

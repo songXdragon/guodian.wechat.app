@@ -4,11 +4,18 @@
 function myBill(){};
 
 myBill.prototype.init = function(){
+        var d=$().weuiDialog({
+            title:"æç¤º",
+            content:"æµ‹è¯•Dialogæç¤º"
+        });
+        d.show();
 
+
+    myBill.prototype.getHHbyWxId('9000107362','1609');
 };
 
-//¸ù¾İ»§ºÅÓëÊ±¼ä»ñÈ¡µçÁ¿µç·ÑĞÅÏ¢
-businessHall.prototype.getHHbyWxId = function(consNo,rcvblYm){
+//æ ¹æ®æˆ·å·ä¸æ—¶é—´è·å–ç”µé‡ç”µè´¹ä¿¡æ¯
+myBill.prototype.getHHbyWxId = function(consNo,rcvblYm){
 
 
 };

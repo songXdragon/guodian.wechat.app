@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-cmn-Hans">
 <head>
 	<meta charset="UTF-8">
@@ -59,13 +59,21 @@
 			</div>
 			<div class="row-2-item">
 				<svg data-src="svg/dashboard.svg" id="svgLoader"></svg>
-				<div class="ellipsis">当前电量处于<span class="orange-1">第二阶段</span></div>
+				<div class="ellipsis">当前处于<span class="orange-1">第二阶段</span></div>
 			</div>
 		</div>
 	</div>
 
 	<div class="notice">
-		<a href="javascript:;" class="ellipsis"><em class="red-1">消息提醒：</em> 您的xxx问题已经有新的回复</a>
+		<a href="javascript:;"><em class="red-1">消息提醒：</em> </a>
+		<div class="newsMarquee">
+			<ul>
+				<li class="ellipsis">您的xxx问题已经有新的回复您的xxx问题已经有新的回复您的xxx问题已经有新的回复</li>
+				<li class="ellipsis">1455***125　抽中200元</li>
+				<li class="ellipsis">1455***125　抽中300元</li>
+				<li class="ellipsis">1455***125　抽中400元</li>
+			</ul>
+		</div>
 	</div>
 
 	<div class="weui-grids">
@@ -132,17 +140,48 @@
 	</div>
 
 	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="js/newsMarquee.js"></script>
 
 	<script src="js/weui-dialog.js"></script>
 	<script src="js/businessHall.js"></script>
 	<script src="js/common.js"></script>
 	<script>
 		$(document).ready(function() {
-			//index页面目前跳出dialog有问题
 			var bh = new businessHall();
 			bh.init();
-
 		});
+	</script>
+	<script>
+		//消息滚动
+		$(function() { 
+			$('.newsMarquee').newsMarquee();
+		});
+
+		//切换户名和户号
+		var setSwtichForConsNo = function(){
+			var $userNumber = $('#userNumber'),
+					$firstLi = $userNumber.find('li:eq(0)'),
+					$firstCode = $firstLi.find('.houseCode'),
+					$firstName = $firstLi.find('.houseName'),
+					isVisible = false;
+
+			$userNumber.on("click", 'li', function(e){
+				var $this = $(this),
+						selectedCode = $this.find('.houseCode').text(),
+						selectedName = $this.find('.houseName').text();
+				if (isVisible) {
+					if (selectedCode !== $firstCode.text()) {
+						$firstCode.text(selectedCode);
+						$firstName.text(selectedName);
+					}
+					$firstLi.removeClass('first').siblings().slideUp(200); //第一个li增加first类名，其它li收起来
+					isVisible = false;
+				} else {
+					$firstLi.addClass('first').siblings().slideDown(200); //第一个li移除first类名，其它li展开
+					isVisible = true;
+				}
+			});
+		};
 
 		//加载svg并设置指针角度
 		$(function() {
@@ -188,7 +227,7 @@
 							});
 						}
 					}
-				}
+				};
 				/*
 				 *根据参数设置指针角度
 				 *指针的角度介于0－270度之间
@@ -197,32 +236,6 @@
 					setPointerState(162);
 				}, 100);
 			})
-		});
-
-		//切换户名和户号
-		$(function(){
-			var $userNumber = $('#userNumber'),
-				$firstLi = $userNumber.find('li:eq(0)'),
-				$firstCode = $firstLi.find('.houseCode'),
-				$firstName = $firstLi.find('.houseName'),
-				isVisible = false;
-
-			$userNumber.on("click", 'li', function(e){
-				var $this = $(this),
-					selectedCode = $this.find('.houseCode').text(),
-					selectedName = $this.find('.houseName').text();
-				if (isVisible) { 
-					if (selectedCode !== $firstCode.text()) { 
-						$firstCode.text(selectedCode);
-						$firstName.text(selectedName);
-					}					
-					$firstLi.removeClass('first').siblings().slideUp(200); //第一个li增加first类名，其它li收起来
-					isVisible = false;
-				} else { 
-					$firstLi.addClass('first').siblings().slideDown(200); //第一个li移除first类名，其它li展开
-					isVisible = true;
-				}
-			});
 		});
 	</script>
 </body>
