@@ -1,0 +1,55 @@
+.bh-myBill { 
+	background-color: @body-bg;
+	color: @gray-1;
+	.row-2 { 
+		display: -webkit-box;
+		background-color: @white;
+		> div { 
+			width: 50%;
+			text-align: center;
+			padding: 0.1rem;
+			p { 
+				line-height: 1.8;
+			}
+			.green-1 { 
+				font-size: 0.16rem;
+			}
+		}
+	}
+	.row-3 { 
+		background-color: @white;
+		padding: @d15;
+		margin-top: 0.1rem;
+		.weui-cell { 
+			font-size: 0.16rem;
+			padding-right: 0;
+		}
+		.weui-cell:before {
+		    border-top: none;
+		}
+		
+		.weui-cell__ft:after {
+		    border-color: @orange-1;
+		}
+		.red-1 { 
+			font-style: normal;
+			font-weight: bold;
+		}
+		.nextDate { 
+			float: right;
+		}
+	}
+	.row-4 { 
+		background-color: @white;
+		padding: @d15;
+		margin-top: 0.1rem;
+		text-align: center;
+		caption { 
+			text-align: left;
+			padding-bottom: 0.06rem;
+		}
+		.green-1 { 
+			font-style: normal;
+		}
+	}
+}

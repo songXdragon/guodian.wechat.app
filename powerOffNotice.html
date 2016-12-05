@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+	<title>停电公告信息</title>
+	<link rel="stylesheet" href="bower_components/weui/dist/style/weui.min.css"/>
+	<link rel="stylesheet" href="bower_components/dcloud-mui/plugin/picker/css/mui.picker.css"/>
+	<link rel="stylesheet" href="bower_components/dcloud-mui/plugin/picker/css/mui.poppicker.css"/>
+	<link rel="stylesheet" href="css/stateGrid_businessHall.css" />
+</head>
+<body ontouchstart class="bh-powerOffNotice">
+	<!--停电公告信息-->
+	<div class="addressSelect">
+        <label for="address">选择位置</label>
+        <input type="button" value="武汉市 武昌区供电所" id="showCity">	
+    </div>
+
+    <div class="daySelect" id="daySelect">
+    	<a href="javascript:;" class="active">近一天</a>
+    	<a href="javascript:;">近三天</a>
+    	<a href="javascript:;">近七天</a>
+    </div>
+
+    <div class="powerOffInfo" id="day1">
+	    <div class="powerOffItem">
+	    	<div class="weui-cells">
+	            <div class="weui-cell bg-white">
+	                <p>武汉市洪山区、武汉市洪山区、武汉市洪山区、武汉市洪山区、武汉市洪山区、武汉市洪山区、武汉市洪山区、武汉市洪山区、武汉市洪山区</p>
+	            </div>
+	            <div class="weui-cell bg-white toggleMore">
+	                <div class="weui-cell__bd">
+	                    <p class="content">停电时间：<span>2016-10-20 07:05 至 2016-10-21 07:00</span></p>
+	                </div>
+	                <div class="weui-cell__ft"><i class="arrow arrow-up"></i></div>
+	            </div>
+	            <div class="weui-cell more">
+	                <p class="content">停电类型：<span>计划停电</span></p>
+	            </div>
+	            <div class="weui-cell more">
+	                <p class="content">停电范围：<span>武汉市洪山区、武汉市洪山区、武汉市洪山区、武汉市洪山区、武汉市洪山区、武汉市洪山区、武汉市洪山区、武汉市洪山区、武汉市洪山区</span></p>
+	            </div>
+	            <div class="weui-cell more">
+	                <p class="content">停电原因： <span>武汉市洪山区、武汉市洪山区、武汉市洪山区、武汉市洪山区、武汉市洪山区、武汉市洪山区、武汉市洪山区、武汉市洪山区、武汉市洪山区</span></p>
+	            </div>
+	        </div>
+	    </div>
+
+	    <div class="powerOffItem">
+	    	<div class="weui-cells">
+	            <div class="weui-cell bg-white">
+	                <p>武汉市洪山区、武汉市洪山区、武汉市洪山区、武汉市洪山区、武汉市洪山区、武汉市洪山区、武汉市洪山区、武汉市洪山区、武汉市洪山区</p>
+	            </div>
+	            <div class="weui-cell bg-white toggleMore">
+	                <div class="weui-cell__bd">
+	                    <p class="content">停电时间：<span>2016-10-20 07:05 至 2016-10-21 07:00</span></p>
+	                </div>
+	                <div class="weui-cell__ft"><i class="arrow arrow-down"></i></div>
+	            </div>
+	            <div class="weui-cell more hide">
+	                <p class="content">停电类型：<span>计划停电</span></p>
+	            </div>
+	            <div class="weui-cell more hide">
+	                <p class="content">停电范围：<span>武汉市洪山区、武汉市洪山区、武汉市洪山区、武汉市洪山区、武汉市洪山区、武汉市洪山区、武汉市洪山区、武汉市洪山区、武汉市洪山区</span></p>
+	            </div>
+	            <div class="weui-cell more hide">
+	                <p class="content">停电原因： <span>武汉市洪山区、武汉市洪山区、武汉市洪山区、武汉市洪山区、武汉市洪山区、武汉市洪山区、武汉市洪山区、武汉市洪山区、武汉市洪山区</span></p>
+	            </div>
+	        </div>
+	    </div>
+    </div>
+
+	<div class="powerOffInfo hide" id="day3">
+		<div class="powerOffItem">
+	    	3天的内容略...
+	    </div>
+	</div>
+
+	<div class="powerOffInfo hide" id="day7">
+		<div class="powerOffItem">
+	    	7天的内容略...
+	    </div>
+	</div>
+    
+
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="bower_components/dcloud-mui/dist/js/mui.min.js"></script>
+	<script src="bower_components/dcloud-mui/plugin/picker/js/mui.picker.js"></script>
+	<script src="bower_components/dcloud-mui/plugin/picker/js/mui.poppicker.js"></script>
+	<script src="js/cityData.js"></script>
+	<script>
+		//选择近一天、近三天、近七天切换内容
+		$(function() { 
+			var $powerOffInfo = $('.powerOffInfo');
+			$('#daySelect').on('click', 'a', function() { 
+				var index = $(this).index(),
+					$willShowed = $powerOffInfo.eq(index);
+				$(this).addClass('active').siblings().removeClass('active');
+				$willShowed.fadeIn(100);
+				$powerOffInfo.not($willShowed).hide();
+			});
+
+			$('.toggleMore').on('click', function() { 
+				$(this).siblings('.more').fadeToggle(100);
+				$(this).find('.arrow').toggleClass('arrow-up arrow-down');
+			});
+		});
+
+		//地址级联选择
+		$(function() { 
+			mui.init();
+			mui.ready(function() {
+				var cityPicker = new mui.PopPicker({
+					layer: 2
+				});
+				cityPicker.setData(cityData);
+				var showCityPickerInput = document.getElementById('showCity');
+				var cityResult = document.getElementById('cityResult');
+				showCityPickerInput.addEventListener('tap', function(event) {
+					cityPicker.show(function(items) {
+						cityId=items[0].value;
+						qyId = items[1].value;
+						jQuery("#cityId").val(cityId);
+						jQuery("#qyId").val(qyId);
+						showCityPickerInput.value = items[0].text + " " + items[1].text;
+					});
+				}, false);
+			});
+		});
+	</script>
+</body>
+</html>

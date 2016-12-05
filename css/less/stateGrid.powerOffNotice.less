@@ -1,0 +1,84 @@
+.bh-powerOffNotice { 
+	background-color: @body-bg;
+	color: @gray-1;
+	.addressSelect { 
+		margin: @d15;
+		display: -webkit-box;
+		-webkit-box-pack: justify;
+		label { 
+			display: block;
+			height: 0.4rem;
+			line-height: 0.4rem;
+		}
+		input {
+			display: block;
+		    -webkit-appearance: none;
+		    border: 1px solid @green-1;
+		    outline: 0;
+		    height: 0.4rem;
+		    line-height: 0.4rem;
+		    color: @green-1;
+		    padding-right: 0.16rem;
+		    padding-left: 0.16rem;
+		    border-radius: @border-r4;
+		    background-color: @white;
+		}
+	}
+	.daySelect { 
+		margin: @d15;
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: flex;
+		text-align: center;
+		border: 1px solid @line-half;
+		border-radius: @border-r4;
+		background-color: @white;
+		a { 
+			-webkit-box-flex: 1;
+			-webkit-flex: 1;
+			flex: 1;
+			padding: 0.08rem;
+			color: @green-1;
+		}
+		a:first-child { 
+			border-radius: @border-r4 0 0 @border-r4;
+		}
+		a:nth-child(2) { 
+			border-right: 1px solid @line-half;
+			border-left: 1px solid @line-half;
+		}
+		a:last-child { 
+			border-radius: 0 @border-r4 @border-r4 0;
+		}
+		.active { 
+			background-color: @green-1;
+			color: @white;
+		}
+	}
+	.powerOffItem { 
+		margin: @d15;
+		border: 1px solid @line-half;
+		border-radius: @border-r4;
+	}
+	.weui-cells { 
+		margin-top: 0;
+		background-color: transparent;
+	}
+	.weui-cell:first-child { 
+		text-indent: 0.28rem;
+		text-align: justify;
+	}
+	.content { 
+		text-indent: -0.7rem;
+		padding-left: 0.7rem;
+		span { 
+			color: @placeholder;
+		}
+	}
+	.weui-cell:before {
+	    left: 0;
+	}
+	.bg-white:first-child { 
+		border-radius: @border-r4 @border-r4 0 0;
+	}
+}

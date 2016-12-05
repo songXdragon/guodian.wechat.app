@@ -1,0 +1,40 @@
+.bh-powerAnalysis { 
+	background-color: @body-bg;
+	.conclusion { 
+		font-size: 0.14rem;
+		background-color: @white;
+		a { 
+			padding: 0 0.1rem;
+			display: -webkit-box;
+			-webkit-box-pack: justify;
+			-webkit-box-align: center;
+			min-height: 0.5rem;
+			position: relative;
+			div { 
+				span { 
+					display: block;
+					text-align: right;
+				}
+				span:last-child { 
+					font-size: 0.1rem;
+					color: @placeholder;
+				}
+			}
+		}
+		a:last-child { 
+			border-bottom: none;
+		}
+	}
+	.more { 
+		background-color: @white;
+		padding: @d15;
+		text-align: center;
+		caption { 
+			text-align: left;
+			margin-bottom: 0.1rem;
+		}
+		td:nth-child(odd) { 
+			background-color: @body-bg!important;
+		}
+	}
+}

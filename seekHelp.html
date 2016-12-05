@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+	<title>我要求助</title>
+	<link rel="stylesheet" href="bower_components/weui/dist/style/weui.min.css"/>
+	<link rel="stylesheet" href="css/stateGrid_businessHall.css" />
+</head>
+<body ontouchstart class="bh-seekHelp">
+	<!--我要求助-->
+	<form>
+		<div class="form-inline">
+			<label for="helpNumber" class="red-1">*求助工单：</label>
+			<input type="number" class="form-control" id="helpNumber" placeholder="0123456789">
+		</div>
+
+		<div class="form-inline line-bottom margin-10">
+			<label for="mobile">手机号：</label>
+			<input type="tel" class="form-control" id="mobile" placeholder="151458953968">
+		</div>
+
+		<div class="form-inline xs-p">
+			<label for="validatedCode">验证码:</label>
+			<input type="text" class="form-control" id="validatedCode" placeholder="请输入手机验证码" pattern="[0-9a-zA-Z]{6}">
+			<a href="javascript:;" class="bh-getValidatedCode">获取验证码<!--img src="img/validatedCode.jpg" alt="validatedCode"--></a>
+		</div>
+
+		<div class="form-inline line-bottom margin-10">
+			<label for="city">城市：</label>
+			<div class="addressSelect">
+		        <select name="city" id="city" class="bh-select">
+		        	<option value="0">请选择城市</option>
+		        	<option value="1">武汉市</option>
+		            <option value="2">宜昌市</option>
+		            <option value="3">仙桃市</option>
+		            <option value="4">十堰市</option>
+		        </select>
+		        <i class="bh-sj-bottom"></i>
+			</div>
+
+		</div>
+
+		<div class="form-inline">
+			<label for="town">地区：</label>
+			<div class="addressSelect">
+		        <select name="town" id="town" class="bh-select">
+		        	<option value="0">请选择城市</option>
+		        	<option value="1">武汉市</option>
+		            <option value="2">宜昌市</option>
+		            <option value="3">仙桃市</option>
+		            <option value="4">十堰市</option>
+		        </select>
+		        <i class="bh-sj-bottom"></i>
+			</div>
+		</div>
+
+		<div class="form-inline margin-10">
+			<label for="address">详细地址：</label>
+			<input type="text" class="form-control bh-flex" id="address" placeholder="请输入详细地址">
+		</div>
+
+		<div class="form-inline margin-10">
+			<label for="helpDes" class="red-1">*求助内容：</label>
+			<textarea class="form-control bh-flex" rows="3" id="helpDes" placeholder="请输入求助问题"></textarea>
+		</div>
+
+		<a href="javascript:;" class="weui-btn weui-btn_primary">提交</a>
+	</form>
+</body>
+</html>

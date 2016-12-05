@@ -1,0 +1,55 @@
+.bh-bindBill { 
+	margin: @d15*2 @d15;
+	.tooltip { 
+		color: @placeholder;
+		margin-top: 0.1rem;
+		a { 
+			color: @green-1;
+			&:active { 
+				color: red;
+			}
+		}
+	}
+	.form-group {
+	    margin-bottom: 0.2rem;
+	}
+	.form-control { 
+		height: 0.4rem;
+		padding-left: 0.42rem;
+	}
+	#houseNumber { 
+		background: url(../img/3-1.png) no-repeat 0.14rem center;
+		background-size: 0.16rem auto;
+	}
+	#queryCode { 
+		background: url(../img/3-5.png) no-repeat 0.14rem center;
+		background-size: 0.16rem auto;
+	}
+	#validatedCode { 
+		background: url(../img/3-4.png) no-repeat 0.14rem center;
+		background-size: 0.16rem auto;
+	}
+	.weui-btn_primary { 
+		margin-top: 0.3rem;
+	}
+	.weui-btn_plain-primary { 
+		margin-top: 0.15rem;
+	}
+	.validatedCode { 
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: flex;
+		input { 
+			-webkit-box-flex: 1;
+			  -webkit-flex: 1;
+			          flex: 1;
+		}
+		img { 
+			border: 1px solid #eaeaea;
+			border-radius: @border-r4;
+			height: 0.4rem;
+			width: auto;
+			margin-left: @d15;
+		}
+	}
+}

@@ -1,0 +1,117 @@
+.margin-10 { 
+	margin-top: 0.1rem!important;
+}
+.margin-15 { 
+	margin-top: 0.15rem!important;
+}
+.red-1 { 
+	color: @red-1!important;
+}
+.green-1 { 
+	color: @green-1!important;
+}
+.orange-1 { 
+	color: @orange-1!important;
+}
+.bg-white { 
+	background-color: @white;
+}
+.bh-dialog {
+    position: fixed;
+    z-index: 5000;
+    width: 86%;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    background-color: #fff;
+    text-align: center;
+    border-radius: @border-r6;
+    padding: @d15;
+    .previewPic { 
+		margin: 5px 0;
+    }
+}
+.bh-icon-close { 
+	position: relative;
+	display: block;
+	width: @d15 * 2;
+	height: @d15 * 2;
+	background-color: @white;
+	border: 1px solid @line-half;
+	border-radius: 50%;
+	&:before, &:after { 
+		content: '';
+		width: @d15;
+		height: 1px;
+		background-color: @gray-1;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+	}
+	&:before { 
+		-webkit-transform: translate(-50%,-50%) rotateZ(45deg);
+    	transform: translate(-50%,-50%) rotateZ(45deg);
+	}
+	&:after { 
+		-webkit-transform: translate(-50%,-50%) rotateZ(-45deg);
+    	transform: translate(-50%,-50%) rotateZ(-45deg);
+	}
+}
+.bh-getValidatedCode { 
+	color: @green-1;
+	line-height: 0.34rem;
+	img { 
+		width: 0.7rem;
+		border: 1px solid @line-half;
+		border-radius: @border-r2;
+	}
+	&:active { 
+		opacity: 0.8;
+	}
+}
+.bh-sj-bottom { 
+	.sj-b(6px, @gray-1);
+	position: absolute;
+	top: 50%;
+	right: 10%;
+	-webkit-transform: translateY(-25%);
+	transform: translateY(-25%);
+}
+.bh-select { 
+	display: inline-block;
+	width: 100%;
+    -webkit-appearance: none;
+    outline: 0;
+    border: 0;
+    background-color: @white;
+    font-size: 0.14rem;
+    position: relative;
+    option { 
+		font-size: 0.14rem;
+	}
+}
+.bh-flex { 
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+    flex: 1;
+}
+.bh-userBaseInfo { 
+	background-color: @green-1;
+	color: @white;
+	padding: @d15;
+	> div { 
+		display: -webkit-box;
+		.ellipsis:first-child { 
+			width: 55%;
+		}
+		.ellipsis:last-child { 
+			width: 45%;
+			padding-left: 0.14rem;
+			text-align: right;
+		}
+	}
+	p { 
+		line-height: 2;
+	}
+}

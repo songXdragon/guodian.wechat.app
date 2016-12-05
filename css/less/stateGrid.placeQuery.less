@@ -1,0 +1,58 @@
+.bh-placeQuery { 
+	background-color: @body-bg;
+	.addressSelect { 
+		position: relative;
+		display: -webkit-box;
+		display: -webkit-flex;
+		> div { 
+			position: relative;
+			-webkit-box-flex: 1;
+			-webkit-flex: 1;
+			flex: 1;
+	    }
+		.bh-select {
+		    height: 0.44rem;
+		    line-height: 0.44rem;
+		    padding-left: 0.42rem;
+		}
+	}
+	.addressList { 
+		margin: @d15;
+		background-color: @white;
+		border-radius: @border-r4;
+		padding: @d15 @d15 0;
+		box-shadow: 0 0 4px 2px #e0e0e0;
+		h6 { 
+			span { 
+				float: right;
+			}
+		}
+	}
+	.detail { 
+		padding: 0.1rem 0 0.06rem 0.21rem;
+		color: @placeholder;
+		position: relative;
+		line-height: 1.8;
+	}
+	.btns { 
+		display: -webkit-box;
+		display: -webkit-flex;
+		text-align: center;
+		a { 
+			-webkit-box-flex: 1;
+			-webkit-flex: 1;
+			flex: 1;
+			padding: 0.08rem 0;
+			margin: 0.05rem 0;
+			color: @gray-1;
+			img { 
+				height: 0.2rem;
+				margin-right: 0.04rem;
+			}
+			&:active {
+				background-color: #ECECEC;
+				border-radius: @border-r2;
+			}
+		}
+	}
+}

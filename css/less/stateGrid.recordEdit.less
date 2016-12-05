@@ -1,0 +1,97 @@
+.bh-recordEdit { 
+	background-color: @body-bg;
+	.form-inline { 
+		background-color: @white;
+		padding: @d15;
+		position: relative;
+	}
+	label { 
+		display: inline-block;
+		min-width: 0.70rem + 0.26rem;
+		padding-left: 0.26rem;
+	}
+	label[for="houseNumber"] { 
+		background: url(../img/4-1.png) no-repeat left center;
+		background-size: 0.16rem auto;
+	}
+	label[for="username"] { 
+		background: url(../img/4-2.png) no-repeat left center;
+		background-size: 0.16rem auto;
+	}
+	label[for="address"] { 
+		background: url(../img/4-3.png) no-repeat left center;
+		background-size: 0.16rem auto;
+	}
+	label[for="mobile"] { 
+		background: url(../img/4-4.png) no-repeat left center;
+		background-size: 0.14rem auto;
+	}
+	label[for="validatedCode"] { 
+		background: url(../img/4-5.png) no-repeat left center;
+		background-size: 0.16rem auto;
+	}
+	label[for="idCard"] { 
+		background: url(../img/4-6.png) no-repeat left center;
+		background-size: 0.2rem auto;
+	}
+	.bh-getValidatedCode { 
+		float: right;
+	}
+	@media (max-width: 320px) { 
+		form .form-inline { 
+			label { 
+				margin-bottom: 0.1rem;
+			}
+			.form-control { 
+
+				width: 100%;
+			}
+			.bh-getValidatedCode { 
+				margin: 0;
+				padding: 0;
+				position: absolute;
+				right: @d15;
+				top: @d15;
+				line-height: 1.6;
+			}
+		}
+	}
+	@media (max-width: 413px) { 
+		.bh-getValidatedCode { 
+			float: none;
+			display: block;
+			padding-left: 0.04rem;
+			margin-top: 0.04rem;
+			margin-left: 0.70rem + 0.26rem;
+		}
+	}
+	.weui-uploader__info { 
+		a { 
+			color: @green-1;
+		}
+	}
+	.weui-btn_primary { 
+		margin: @d15;
+	}
+	
+	.re-gallery { 
+		display: none;
+		.bh-icon-close { 
+			position: absolute;
+			top: -@d15;
+			right: -@d15;
+		}
+		.previewPic { 
+			min-height: 200px;
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: center center;
+		}
+	}
+	#previewImgs { 
+		overflow-y: scroll;
+	}
+	.showBigImg:active { 
+		opacity: 0.8;
+	}
+}

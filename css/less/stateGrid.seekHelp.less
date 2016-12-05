@@ -1,0 +1,86 @@
+.bh-seekHelp { 
+	background-color: @body-bg;
+	.form-inline { 
+		background-color: @white;
+		padding: @d15;
+		position: relative;
+		display: -webkit-box;
+		display: -webkit-box-flex;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-box-align: center;
+	}
+	.form-control { 
+		width: 42%;
+	}
+	.addressSelect { 
+		display: inline-block;
+		width: 42%;
+		position: relative;
+		.bh-select {
+		    height: 0.34rem;
+		    line-height: 0.34rem;
+		    padding-left: 0.14rem;
+		    border: 1px solid #ccc;
+    		border-radius: @border-r4;
+    		color: @placeholder;
+		}
+	}
+	label { 
+		display: inline-block;
+		min-width: 0.84rem + 0.26rem;
+		padding-left: 0.26rem;
+		height: 0.34rem;
+		line-height: 0.34rem;
+	}
+	label[for="helpNumber"] { 
+		background: url(../img/9-1.png) no-repeat left center;
+		background-size: 0.16rem auto;
+	}
+	label[for="mobile"] { 
+		background: url(../img/4-4.png) no-repeat left center;
+		background-size: 0.16rem auto;
+	}
+	label[for="validatedCode"] { 
+		background: url(../img/4-5.png) no-repeat left center;
+		background-size: 0.16rem auto;
+	}
+	label[for="city"] { 
+		background: url(../img/9-2.png) no-repeat left center;
+		background-size: 0.16rem auto;
+	}
+	label[for="town"] { 
+		background: url(../img/9-3.png) no-repeat left center;
+		background-size: 0.16rem auto;
+	}
+	label[for="address"] { 
+		background: url(../img/9-4.png) no-repeat left center;
+		background-size: 0.16rem auto;
+	}
+	label[for="helpDes"] { 
+		background: url(../img/9-5.png) no-repeat left center;
+		background-size: 0.16rem auto;
+	}
+	.bh-getValidatedCode { 
+		margin-left: 0.1rem;
+	}
+	@media (max-width: 320px) { 
+		.xs-p { 
+			padding-bottom: 0.4rem;
+		}
+		.form-control { 
+			width: 100%;
+		}
+		.bh-getValidatedCode { 
+			position: absolute;
+			right: @d15;
+			bottom: 0.05rem;
+		}
+	}
+	#helpDes { 
+		height: 1rem;
+	}
+	.weui-btn_primary { 
+		margin: @d15*2 @d15;
+	}
+}

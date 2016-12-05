@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+	<title>用电分析</title>
+	<link rel="stylesheet" href="bower_components/weui/dist/style/weui.min.css"/>
+	<link rel="stylesheet" href="css/stateGrid_businessHall.css" />
+</head>
+<body ontouchstart class="bh-powerAnalysis">
+	<div class="bh-userBaseInfo">
+		<div>
+			<p class="ellipsis">用户编号：1345678878</p>
+			<p class="ellipsis">户名：小明小明小明小明小明明</p>
+		</div>
+		<p>武汉市东湖新技术开发区</p>
+	</div>
+
+	<div id="yearContainer" style="min-width: 310px; height: 300px; padding-top: 15px; background-color: white;"></div>
+
+	<div class="conclusion">
+		<a href="" class="line-top">
+			<div>本年累计用电</div>
+			<div>1200度</div>
+		</a>
+		<a href="" class="line-top">
+			<div>平均用电</div>
+			<div>100度/月</div>
+		</a>
+		<a href="" class="line-top">
+			<div>最高用电</div>
+			<div>
+				<span>500.22度</span>
+				<span>2016年6月</span>
+			</div>
+		</a>
+		<a href="" class="line-top">
+			<div>最低用电</div>
+			<div>
+				<span>90度</span>
+				<span>2016年1月</span>
+			</div>
+		</a>
+	</div>
+
+	<div class="more margin-10">
+		<table class="table table-bordered">
+			<caption>更多内容</caption>
+			<tbody>
+				<tr>
+					<td>一档基数</td>
+					<td>2480</td>
+					<td>一档已用</td>
+					<td>2200</td>
+				</tr>
+				<tr>
+					<td>二档基数</td>
+					<td>2480</td>
+					<td>二档已用</td>
+					<td>2200</td>
+				</tr>
+				<tr>
+					<td>三档基数</td>
+					<td>2480</td>
+					<td>三档已用</td>
+					<td>2200</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="bower_components/highcharts/highcharts.js"></script>
+	<script type="text/javascript">
+		$(function () {
+			$('#yearContainer').highcharts({
+				credits: { 
+					enabled: false
+				},
+				chart: {
+					type: 'line'
+				},
+				title: {
+					text: null
+				},
+				xAxis: {
+					categories: ['01月', '02月', '03月', '04月', '05月', '06月', '07月', '08月', '09月', '10月', '11月', '12月'],
+					title: {
+						text: '单位（度）',
+						align: 'high'
+					}
+
+				},
+				yAxis: {
+					title: {
+						text: null
+					},
+					plotLines: [{
+						value: 0,
+						width: 1,
+						color: '#0aba66'
+					}]
+				},
+				plotOptions: {
+					series: {
+						dataLabels: {
+							enabled: true
+						},
+						events: { 
+							click: function(event) { 
+								alert(event.point.category);
+							}
+						},
+						marker: {
+							fillColor: '#ffffff',
+							lineColor: "#0aba66",
+							lineWidth: 1,
+                            radius: 4,  //曲线点半径，默认是4
+                            symbol: 'circle' //曲线点类型："circle", "square", "diamond", "triangle","triangle-down"，默认是"circle"
+                        }
+					}
+				},
+				tooltip: {
+					//valueSuffix: '度',
+					enabled: false
+				},
+				legend: {
+					enabled: false
+				},
+				series: [	//指定数据列
+					{
+						name: '用电量',	//数据列名
+						color: '#0aba66',
+						lineWidth: 1,
+						//shadow: true,
+						//data: [17, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2]	//数据
+						data: [
+							{
+								y: 17
+							}, 
+							{
+								y: 6.9
+							}, 
+							{
+								y: 9
+							}, 
+							{
+								y: 14
+							}, 
+							{
+								y: 18
+							}, 
+							{
+								y: 21
+							}, 
+							{
+								y: 25
+							},
+							{
+								y: 17
+							}, 
+							{
+								y: 6.9
+							}, 
+							{
+								y: 9
+							}, 
+							{
+								y: 14
+							}, 
+							{
+								y: 18
+							}
+						]
+					}
+				]
+			});
+		});
+	</script>
+</body>
+</html>

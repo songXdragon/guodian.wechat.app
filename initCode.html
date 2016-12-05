@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+	<title>初始化查询码</title>
+	<link rel="stylesheet" href="bower_components/weui/dist/style/weui.min.css"/>
+	<link rel="stylesheet" href="css/stateGrid_businessHall.css" />
+</head>
+<body ontouchstart class="bh-initCode">
+	<!--初始化查询码-->
+	<div class="ic-title" id="icTitle">
+		<a href="javascript:;"><span class="active">身份证验证</span></a>
+		<a href="javascript:;"><span>手机号验证</span></a>
+	</div>
+	
+	<div class="ic-content">
+		<form>
+			<div class="form-group">
+				<label for="houseNumber" class="sr-only">请输入10位用户号</label>
+				<input type="number" class="form-control" id="houseNumber" placeholder="请输入10位用户号" pattern="[0-9]{10}">
+				<p class="tooltip">用户编号为10位数字，在您的电费缴费卡或发票可以查看。详细请拨打95588</p>
+			</div>
+
+			<div class="form-group">
+				<label for="idCard" class="sr-only">请输入与用户号匹配的身份证号</label>
+				<input type="text" class="form-control" id="idCard" placeholder="请输入与用户号匹配的身份证号">
+			</div>
+
+			<div class="form-group">
+				<label for="queryCode" class="sr-only">请输入6位查询码</label>
+				<input type="text" class="form-control" id="queryCode" placeholder="请输入6位查询码">
+			</div>
+
+			<div class="form-group">
+				<label for="ConfirmQueryCode" class="sr-only">请重新输入6位查询码</label>
+				<input type="text" class="form-control" id="ConfirmQueryCode" placeholder="请重新输入6位查询码">
+			</div>
+
+			<div class="form-group validatedCode">
+				<label for="validatedCode" class="sr-only">输入6位验证码</label>
+				<input type="text" class="form-control" id="validatedCode" placeholder="输入6位验证码" pattern="[0-9a-zA-Z]{6}">
+				<img src="img/validatedCode.jpg" alt="validatedCode">
+			</div>
+		</form>
+		<form class="hide">
+			手机号验证内容...
+		</form>
+		<a href="javascript:;" class="weui-btn weui-btn_primary">提交</a>
+	</div>
+
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script>
+		$(function() { 
+			var $form = $('.ic-content form');
+			$('#icTitle').on('click', 'a', function() { 
+				var index = $(this).index(),
+					$willShowed = $form.eq(index);
+				$willShowed.fadeIn(100);
+				$form.not($willShowed).hide();
+
+				$(this).find('span').addClass('active').end().siblings().find('span').removeClass('active');
+			});
+		});
+	</script>
+</body>
+</html>

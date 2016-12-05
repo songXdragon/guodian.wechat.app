@@ -1,0 +1,66 @@
+.bh-myServer1 { 
+	background-color: @body-bg;
+	.header { 
+		background-color: @white;
+		text-align: center;
+		padding: 0.22rem 0 0.16rem;
+		h6 { 
+			font-size: 0.16rem;
+			margin-top: 0.04rem;
+		}
+	}
+	.portrait { 
+		width: 0.8rem;
+		height: 0.8rem;
+		margin: 0 auto;
+		border: 1px solid @green-1;
+		border-radius: 50%;
+		background: url(../img/8-1.jpg) no-repeat center center;
+		background-size: cover;
+	}
+	.serverItems { 
+		background-color: @white;
+	}
+	.serverItem { 
+		position: relative;
+		display: -webkit-box;
+		-webkit-box-align: center;
+		a { 
+			display: block;
+			width: 50%;
+			line-height: 2;
+			padding: @d15;
+			color: @gray-1;
+			font-size: 0.14rem;
+			position: relative;
+			white-space: nowrap;
+		    overflow: hidden;
+		    text-overflow: ellipsis;
+			img { 
+				height: 0.2rem;
+				margin-right: 0.02rem;
+			}
+			em { 
+				font-style: normal;
+			}
+			&:active { 
+				background-color: #ececec;
+			}
+		}
+	}
+	.code { 
+		text-align: center;
+		width: 50%;
+		margin: 0.3rem auto;
+		img { 
+			display: block;
+			margin: 0 auto;
+		}
+		img:last-child { 
+			margin-top: 0.06rem;
+			padding: @d15;
+			background-color: @white;
+			border-radius: @border-r4;
+		}
+	}
+}

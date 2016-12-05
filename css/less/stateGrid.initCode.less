@@ -1,0 +1,88 @@
+.bh-initCode { 
+	.ic-title { 
+		background-color: @green-1;
+		text-align: center;
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: flex;
+		position: relative;
+		a { 
+			font-size: 0.18rem;
+			color: @white;
+			width: 50%;
+			padding: 0.05rem;
+			span { 
+				display: inline-block;
+				padding: 0.05rem;
+			}
+			&:active { 
+				color: hsla(0,0%,100%,.6);
+		    	background-color: #179b16;
+			}
+		}
+		.active { 
+			border-bottom: 1px solid @white;
+		}
+		&:after { 
+			content: '';
+			width: 1px;
+			height: 50%;
+			position: absolute;
+			top: 25%;
+			left: 50%;
+			background-color: @white;
+		}
+	}
+	.ic-content { 
+		padding: @d15;
+	}
+	.tooltip { 
+		color: @placeholder;
+		margin-top: 0.1rem;
+	}
+	.form-control { 
+		height: 0.4rem;
+		padding-left: 0.42rem;
+	}
+	#houseNumber { 
+		background: url(../img/3-1.png) no-repeat 0.14rem center;
+		background-size: 0.16rem auto;
+	}
+	#idCard { 
+		background: url(../img/3-2.png) no-repeat 0.14rem center;
+		background-size: 0.2rem auto;
+	}
+	#queryCode { 
+		background: url(../img/3-3.png) no-repeat 0.14rem center;
+		background-size: 0.16rem auto;
+	}
+	#ConfirmQueryCode { 
+		background: url(../img/3-4.png) no-repeat 0.14rem center;
+		background-size: 0.16rem auto;
+	}
+	#validatedCode { 
+		background: url(../img/3-5.png) no-repeat 0.14rem center;
+		background-size: 0.16rem auto;
+	}
+	.weui-btn { 
+		margin-top: 0.3rem;
+		background-color: @green-1;
+	}
+	.validatedCode { 
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: flex;
+		input { 
+			-webkit-box-flex: 1;
+			  -webkit-flex: 1;
+			          flex: 1;
+		}
+		img { 
+			border: 1px solid #eaeaea;
+			border-radius: @border-r4;
+			height: 40px;
+			width: auto;
+			margin-left: @d15;
+		}
+	}
+}
