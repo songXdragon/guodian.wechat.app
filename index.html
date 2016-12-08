@@ -9,53 +9,23 @@
 </head>
 <body ontouchstart class="bh-businessHall">
 	<!--营业厅首页-->
-	<div class="header">
+	<div class="header active">
 		<ul class="row-1" id="userNumber">
-			<li>
-				<a class="clearfix" href="javascript:;">
-					<div class="ellipsis">用户编码：<b class="houseCode">9900001141</b></div>
-					<div class="ellipsis">户名：<b class="houseName">李秋1李秋李秋李秋李秋李秋</b></div>
-				</a>
-			</li>
-			<li>
-				<a class="clearfix" href="javascript:;">
-					<div class="ellipsis">用户编码：<b class="houseCode">9900001141</b></div>
-					<div class="ellipsis">户名：<b class="houseName">李秋1李秋李秋李秋李秋李秋</b></div>
-				</a>
-			</li>
-			<li>
-				<a class="clearfix" href="javascript:;">
-					<div class="ellipsis">用户编码：<b class="houseCode">9900001142</b></div>
-					<div class="ellipsis">户名：<b class="houseName">李秋2李秋李秋李秋李秋李秋</b></div>
-				</a>
-			</li>
-			<li>
-				<a class="clearfix" href="javascript:;">
-					<div class="ellipsis">用户编码：<b class="houseCode">9900001143</b></div>
-					<div class="ellipsis">户名：<b class="houseName">李秋3李秋李秋李秋李秋李秋</b></div>
-				</a>
-			</li>
-			<li>
-				<a class="clearfix" href="javascript:;">
-					<div class="ellipsis">用户编码：<b class="houseCode">9900001144</b></div>
-					<div class="ellipsis">户名：<b class="houseName">李秋4李秋李秋李秋李秋李秋</b></div>
-				</a>
-			</li>
-			<li>
-				<a class="clearfix" href="javascript:;">
-					<div class="ellipsis">用户编码：<b class="houseCode">9900001145</b></div>
-					<div class="ellipsis">户名：<b class="houseName">李秋5李秋李秋李秋李秋李秋</b></div>
-				</a>
-			</li>
+			<!--<li>-->
+				<!--<a class="clearfix" href="javascript:;">-->
+					<!--<div class="ellipsis">用户编码：<b class="houseCode">9900001141</b></div>-->
+					<!--<div class="ellipsis">户名：<b class="houseName">李秋1李秋李秋李秋李秋李秋</b></div>-->
+				<!--</a>-->
+			<!--</li>-->
 		</ul>
 		<div class="row-2 clearfix" id="userInfo">
 			<div class="row-2-item">
-				<address id="bh_addr" class="ellipsis-2">地址：武汉市洪山区武汉市洪山区武汉市洪武汉市洪山区武汉市洪山区武汉</address>
+				<address id="bh_addr" class="ellipsis-2">地址：</address>
 				<div class="balance">
 					<span>可用余额</span>
 					<span class="red-1">¥2.00</span>
 				</div>
-				<div>可用余额不足，<a href="" class="green-1">立即缴费</a></div>
+				<div id="balance_lowTip" style="display: none;">可用余额不足，<a href="" class="green-1">立即缴费</a></div>
 			</div>
 			<div class="row-2-item">
 				<svg data-src="svg/dashboard.svg" id="svgLoader"></svg>
