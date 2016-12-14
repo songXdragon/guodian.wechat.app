@@ -34,91 +34,23 @@
 				<tr>
 					<th>日期</th>
 					<th>总电量</th>
-					<th>可用余额</th>
+					<!-- <th>可用余额</th> -->
 				</tr>
 			</thead>
 			<tbody>
-				<tr>
-					<td>11-12</td>
-					<td>200</td>
-					<td>100</td>
-				</tr>
-				<tr>
-					<td>11-11</td>
-					<td>200</td>
-					<td>100</td>
-				</tr>
-				<tr>
-					<td>11-10</td>
-					<td>200</td>
-					<td>100</td>
-				</tr>
 			</tbody>
 		</table>
 	</div>
 
 	<script src="bower_components/jquery/dist/jquery.min.js"></script>
 	<script src="bower_components/highcharts/highcharts.js"></script>
+	<script src="js/commons/weui-dialog.js"></script>
+	<script src="js/commons/common.js"></script>
+	<script src="js/realtimePower.js"></script>
 	<script type="text/javascript">
 		$(function () {
-			$('#sevenDayContainer').highcharts({
-				chart: {
-					type: 'column'
-				},
-				title: {
-					text: null
-				},
-				subtitle: {
-					text: null
-				},
-				xAxis: {
-					categories: ['11-01', '11-02', '11-03', '11-04', '11-05', '11-06', '11-07'],
-					title: {
-						text: null
-					}
-				},
-				yAxis: {
-					min: 0,
-					title: {
-						text: '单位（度）',
-						align: 'high'
-					},
-					labels: {
-						overflow: 'justify'
-					}
-				},
-				plotOptions: {
-					series: {
-						dataLabels: {
-							enabled: true,
-							color: '#606060'
-						},
-						events: { 
-							click: function(event) { 
-								alert(event.point.category);
-							}
-						}
-					}
-				},
-				tooltip: {
-					//valueSuffix: '度',
-					enabled: false
-				},
-				exporting: { 
-					enabled: false
-				},
-				legend: {
-					enabled: false
-				},
-				credits: {
-					enabled: false
-				},
-				series: [{
-					name: '用电量',
-					color: '#29AE63',
-					data: [14, 16, 21, 25, 28, 1, 2]
-				}]
-			});
+			var rtp = new RealtimePower();
+			rtp.init("6662955144");
 		});
 	</script>
 </body>
