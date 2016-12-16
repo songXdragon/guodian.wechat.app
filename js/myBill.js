@@ -3,12 +3,6 @@
  */
 function myBill(){};
 
-myBill.prototype.dialog = function(title, content){
-	$().weuiDialog({
-        title:title,
-        content:content
-    }).show();
-}
 myBill.prototype.init = function(){
     // 获取户号信息
     var consNo = "6662955144";
@@ -35,7 +29,7 @@ myBill.prototype.getWxhhByHh = function(consNo){
             }
         },
         error: function(err) {
-			this.dialog("提示","获取用户信息失败");
+			Weui.dialog("提示","获取用户信息失败");
         }
     });
 };
@@ -64,7 +58,7 @@ myBill.prototype.getDldfByHhYm = function(consNo,rcvblYm){
             }
         },
         error: function(err) {
-			this.dialog("提示","获取电量电费失败");
+			Weui.dialog("提示","获取电量电费失败");
         }
     });
 };
@@ -83,7 +77,7 @@ myBill.prototype.getBillDate = function(consNo){
             }
         },
         error: function(err) {
-			this.dialog("提示","获取本期用电时间失败");
+			Weui.dialog("提示","获取本期用电时间失败");
         }
     });
 };
@@ -105,7 +99,7 @@ myBill.prototype.getYearBillInfo = function(consNo, ym){
             }
         },
         error: function(err) {
-			this.dialog("提示","获取最近12个月电费账单失败");
+			Weui.dialog("提示","获取最近12个月电费账单失败");
         }
     });
 };
