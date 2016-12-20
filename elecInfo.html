@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+	<title>电量信息</title>
+	<link rel="stylesheet" href="bower_components/weui/dist/style/weui.min.css"/>
+	<link rel="stylesheet" href="css/stateGrid_businessHall.css" />
+</head>
+<body ontouchstart class="bh-elecInfo">
+<ul class="elecInfo">
+	<li>
+		<div class="weui-flex">
+			<p class="weui-flex__item">办理指南</p>
+			<img src="img/10-1.jpg" alt="tu">
+		</div>
+		<div class="weui-cells">
+			<a class="weui-cell weui-cell_access" href="javascript:;">
+				<p class="ellipsis">办理指南一办理指南一办理指南一办理指南一办理指南一办理指南一</p>
+				<div class="weui-cell__ft"></div>
+			</a>
+			<a class="weui-cell weui-cell_access" href="javascript:;">
+				<p>办理指南二</p>
+				<div class="weui-cell__ft"></div>
+			</a>
+		</div>
+	</li>
+	<li>
+		<div class="weui-flex">
+			<p class="weui-flex__item">常见问题</p>
+			<img src="img/10-2.jpg" alt="tu">
+		</div>
+		<div class="weui-cells">
+			<a class="weui-cell weui-cell_access" href="javascript:;">
+				<p class="ellipsis">办理指南一办理指南一办理指南一办理指南一办理指南一办理指南一</p>
+				<div class="weui-cell__ft"></div>
+			</a>
+			<a class="weui-cell weui-cell_access" href="javascript:;">
+				<p>办理指南二</p>
+				<div class="weui-cell__ft"></div>
+			</a>
+			<a class="weui-cell weui-cell_access" href="javascript:;">
+				<p>办理指南三</p>
+				<div class="weui-cell__ft"></div>
+			</a>
+		</div>
+	</li>
+	<li>
+		<div class="weui-flex">
+			<p class="weui-flex__item">法政法规</p>
+			<img src="img/10-3.jpg" alt="tu">
+		</div>
+	</li>
+	<li>
+		<div class="weui-flex">
+			<p class="weui-flex__item">湖北电价</p>
+			<img src="img/10-4.jpg" alt="tu">
+		</div>
+	</li>
+</ul>
+
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="js/commons/common.js"></script>
+	<script src="js/elecInfo.js"></script>
+	<script>
+		$(document).ready(function() {
+			var hoses = new elecInfo();
+			hoses.init();
+		});
+
+		function test(e) {
+			window.location.href='elecInfoDetailed.html';
+		};
+
+		$(function() { 
+			$('.elecInfo').on('click', '.weui-flex', function(){ 
+				$(this).siblings('.weui-cells').slideToggle(200);
+			})
+		});
+	</script>
+</body>
+</html>

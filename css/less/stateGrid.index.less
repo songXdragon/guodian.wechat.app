@@ -6,6 +6,7 @@
 		background-size: cover;
 		color: @gray-1;
 		position: relative;
+		min-height: 200px;
 		.row-1 {
 			position: absolute;
 			z-index: 1;
@@ -130,6 +131,9 @@
 	            font-size: 14px;
 			}
 		}
+	}
+	.active { 
+		min-height: auto;
 		&:before { 
 			content: '';
 			position: absolute;

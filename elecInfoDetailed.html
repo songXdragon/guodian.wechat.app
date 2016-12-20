@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+	<title>电量信息</title>
+	<link rel="stylesheet" href="bower_components/weui/dist/style/weui.min.css"/>
+	<link rel="stylesheet" href="css/stateGrid_businessHall.css" />
+</head>
+<body ontouchstart class="bh-elecInfo">
+	<ul class="elecInfoDetailed" id="names">
+		<li>
+			<div class="weui-flexs">
+				<p class="weui-flex__items"><h1>办理指南</h1></p>
+			</div>
+			<div class="weui-cellss">
+					<p class="ellipsiss">办理指南一办理指南一办理指南一办理指南一办理指南一办理指南一</p>
+					<div class="weui-cell__fts"></div>
+			</div>
+		</li>
+
+	</ul>
+
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+
+
+	<script>
+		$(function() {
+			$('.elecInfo').on('click', '.weui-flex', function(){
+				$(this).siblings('.weui-cells').slideToggle(200);
+			})
+		});
+	</script>
+</body>
+</html>

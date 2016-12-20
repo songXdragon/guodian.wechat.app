@@ -7,8 +7,9 @@
 	<link rel="stylesheet" href="bower_components/weui/dist/style/weui.min.css"/>
 	<link rel="stylesheet" href="css/stateGrid_businessHall.css" />
 </head>
-<body ontouchstart class="bh-myServer1">
+<body ontouchstart class="bh-myServer1" >
 	<!--我的网格员-->
+<div id="grid">
 	<div class="header">
 		<div class="portrait"></div>
 		<h6>张三</h6>
@@ -40,11 +41,19 @@
 			</a>
 		</div>
 	</div>
-
+</div>
 	<div class="code">
 		<img src="img/8-6.png" alt="tu">
 		<img src="img/wxcode.jpg" alt="tu">
 	</div>
-
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="js/commons/common.js"></script>
+	<script src="js/myServer.js"></script>
+	<script>
+		$(document).ready(function() {
+			var hose = new myServer();
+			hose.init();
+		});
+	</script>
 </body>
 </html>

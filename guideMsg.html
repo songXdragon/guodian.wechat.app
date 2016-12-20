@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+	<title>信息服务</title>
+	<link rel="stylesheet" href="bower_components/weui/dist/style/weui.min.css"/>
+	<link rel="stylesheet" href="bower_components/dcloud-mui/plugin/picker/css/mui.picker.css"/>
+	<link rel="stylesheet" href="bower_components/dcloud-mui/plugin/picker/css/mui.poppicker.css"/>
+	<link rel="stylesheet" href="css/stateGrid_businessHall.css" />
+	<style>
+		.weui-cell__bd{
+			font-size:25px;
+			position:relative;
+		}
+	</style>
+</head>
+<body ontouchstart class="bh-powerOffNotice">
+    <div class="powerOffInfo" id="name">
+			<div class="weui-cells" >
+				<div class="weui-cell bg-white toggleMore">
+					<div class="weui-cell__bd">
+					 <p>服务信息<span><img src="img/dj.jpg" width="50" height="50" align="right"></span></p>
+				    </div>
+					<div class="weui-cell__ft"><i class="arrow arrow-down"></i></div>
+				</div>
+				<table >
+					<tr>
+						<td>价更高，价更高，价更高，价更高，价更高，价更高，价更高，v、价更高</td>
+					</tr>
+				</table>
+			</div>
+    </div>
+
+
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="bower_components/dcloud-mui/dist/js/mui.min.js"></script>
+	<script src="bower_components/dcloud-mui/plugin/picker/js/mui.picker.js"></script>
+	<script src="bower_components/dcloud-mui/plugin/picker/js/mui.poppicker.js"></script>
+		<!--<script src="js/commons/common.js"></script>-->
+		<!--<script src="js/guideMsg.js"></script>-->
+	<script>
+//		$(document).ready(function() {
+//			var hoses = new guideMsg();
+//			hoses.init();
+//		});
+
+		function tests(e) {
+				self.location='guideDetailedMsg.html';
+		};
+
+
+		function test(e) {
+			$(e).siblings('#msg').fadeToggle(100);
+			$(e).find('.arrow').toggleClass('arrow-up arrow-down');
+
+		};
+
+	</script>
+</body>
+</html>

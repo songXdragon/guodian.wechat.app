@@ -9,7 +9,7 @@
 </head>
 <body ontouchstart class="bh-bindBill">
 	<!--账号绑定-->
-	<form>
+	<form name="bindForm" method="GET">
 		<div class="form-group">
 			<label for="houseNumber" class="sr-only">请输入10位用户号</label>
 			<input type="number" class="form-control" id="houseNumber" placeholder="请输入10位用户号" pattern="[0-9]{10}">
@@ -27,8 +27,23 @@
 			<input type="text" class="form-control" id="validatedCode" placeholder="请输入6位验证码" pattern="[0-9a-zA-Z]{6}">
 			<img src="img/validatedCode.jpg" alt="validatedCode">
 		</div>
-		<a href="javascript:;" class="weui-btn weui-btn_primary">提交户号绑定</a>
-		<a href="javascript:;" class="weui-btn weui-btn_plain-primary">初始化查询码</a>
+		<a href="javascript:;" onclick="bindBills()" class="weui-btn weui-btn_primary">提交户号绑定</a>
+		<a href="javascript:;" onclick="initCode()" class="weui-btn weui-btn_plain-primary">初始化查询码</a>
 	</form>
+
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="bower_components/highcharts/highcharts.js"></script>
+	<script src="js/commons/common.js"></script>
+	<script src="js/bindBill.js"></script>
+	<script>
+		function bindBills(){
+			var bind = new bindBill();
+			bind.init();
+		}
+		function initCode(){
+			window.location.href="initCode.html";
+		}
+
+	</script>
 </body>
 </html>

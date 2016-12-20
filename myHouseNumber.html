@@ -7,9 +7,10 @@
 	<link rel="stylesheet" href="bower_components/weui/dist/style/weui.min.css"/>
 	<link rel="stylesheet" href="css/stateGrid_businessHall.css" />
 </head>
-<body ontouchstart class="bh-myHouseNumber">
+<body ontouchstart class="bh-myHouseNumber" >
 	<!--我的户号-->
-	<div class="houseNumberList">
+	<div id="consNumber">
+	<!--<div class="houseNumberList">
 		<h6>张三<span>4568978712</span></h6>
 		<p>湖北省武汉市武昌区</p>
 		<div class="weui-cells weui-cells_checkbox">
@@ -37,11 +38,23 @@
 			</label>
 			<a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_plain-primary">删除</a>
 		</div>
+	</div>-->
 	</div>
+	<a href="javascript:;" onclick="addUser()" class="weui-btn weui-btn_primary">添加户号</a>
 
-	<a href="javascript:;" class="weui-btn weui-btn_primary">添加户号</a>
-	
 	
 	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="js/commons/common.js"></script>
+	<script src="js/myHouseNumber.js"></script>
+	<script>
+		$(document).ready(function() {
+			var hose = new myHouseNumber();
+			hose.init();
+		});
+
+		function addUser(){
+			window.location.href="bindBill.html";
+		}
+	</script>
 </body>
 </html>
