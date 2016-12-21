@@ -1,21 +1,27 @@
-var cityData = [{
-        'value': '3201',
-        'text': '南京市',
-        children: [{ 'value': '320100', 'text': '全部' }, { 'value': '320125', 'text': '高淳县' }, { 'value': '320124', 'text': '溧水县' }, { 'value': '320116', 'text': '六合区' },
-            { 'value': '320115', 'text': '江宁区' }, { 'value': '320114', 'text': ' 雨花区' }, { 'value': '320113', 'text': '栖霞区' }, { 'value': '320111', 'text': '浦口区' }, { 'value': '320107', 'text': '下关区' },
-            { 'value': '320106', 'text': '鼓楼区' }, { 'value': '320105', 'text': '建邺区' }, { 'value': '320104', 'text': '秦淮区' }, { 'value': '320103', 'text': '白下区' }, { 'value': '320102', 'text': '玄武区' }
-        ]
-    },
-    { 'value': '3204', 'text': '常州市', children: [{ 'value': '320400', 'text': '全部' }, { 'value': '320482', 'text': '金坛市' }, { 'value': '320481', 'text': '溧阳市' }, { 'value': '320412', 'text': '武进区' }, { 'value': '320411', 'text': '新北区' }, { 'value': '320405', 'text': '戚墅堰区' }, { 'value': '320404', 'text': '钟楼区' }, { 'value': '320402', 'text': '天宁区' }] },
-    { 'value': '3205', 'text': '苏州市', children: [{ 'value': '320500', 'text': '全部' }, { 'value': '320508', 'text': '新区' }, { 'value': '320509', 'text': '园区' }, { 'value': '320585', 'text': '太仓市' }, { 'value': '320584', 'text': '吴江市' }, { 'value': '320583', 'text': '昆山市' }, { 'value': '320582', 'text': '张家港市' }, { 'value': '320581', 'text': '常熟市' }, { 'value': '320507', 'text': '相城区' }, { 'value': '320506', 'text': '吴中区' }, { 'value': '320505', 'text': '虎丘区' }, { 'value': '320504', 'text': '金阊区' }, { 'value': '320503', 'text': '平江区' }, { 'value': '320502', 'text': '沧浪区' }] },
-    { 'value': '3202', 'text': '无锡市', children: [{ 'value': '320200', 'text': '全部' }, { 'value': '320212', 'text': '新区' }, { 'value': '320282', 'text': '宜兴市' }, { 'value': '320281', 'text': '江阴市' }, { 'value': '320211', 'text': '滨湖区' }, { 'value': '320206', 'text': '惠山区' }, { 'value': '320205', 'text': '锡山区' }, { 'value': '320204', 'text': '北塘区' }, { 'value': '320203', 'text': '南长区' }, { 'value': '320202', 'text': '崇安区' }] },
-    { 'value': '3203', 'text': '徐州市', children: [{ 'value': '320300', 'text': '全部' }, { 'value': '320312', 'text': '经济开发区' }, { 'value': '320324', 'text': '睢宁县' }, { 'value': '320323', 'text': '铜山县' }, { 'value': '320322', 'text': '沛　县' }, { 'value': '320321', 'text': '丰　县' }, { 'value': '320311', 'text': '泉山区' }, { 'value': '320305', 'text': '贾汪区' }, { 'value': '320304', 'text': '九里区' }, { 'value': '320303', 'text': '云龙区' }, { 'value': '320302', 'text': '鼓楼区' }, { 'value': '320382', 'text': '邳州市' }, { 'value': '320381', 'text': '新沂市' }] },
-    { 'value': '3206', 'text': '南通市', children: [{ 'value': '320600', 'text': '全部' }, { 'value': '320612', 'text': '开发区' }, { 'value': '320623', 'text': '如东县' }, { 'value': '320621', 'text': '海安县' }, { 'value': '320611', 'text': '港闸区' }, { 'value': '320602', 'text': '崇川区' }, { 'value': '320684', 'text': '海门市' }, { 'value': '320683', 'text': '通州市' }, { 'value': '320682', 'text': ' 如皋市' }, { 'value': '320681', 'text': '启东市' }] },
-    { 'value': '3207', 'text': '连云港市', children: [{ 'value': '320700', 'text': '全部' }, { 'value': '320724', 'text': '灌南县' }, { 'value': '320723', 'text': '灌云县' }, { 'value': '320722', 'text': '东海县' }, { 'value': '320721', 'text': '赣榆县' }, { 'value': '320706', 'text': '海州区' }, { 'value': '320705', 'text': '新浦区' }, { 'value': '320703', 'text': '连云区' }] },
-    { 'value': '3208', 'text': '淮安市', children: [{ 'value': '320800', 'text': '全部' }, { 'value': '320812', 'text': '开发区' }, { 'value': '320831', 'text': '金湖县' }, { 'value': '320830', 'text': '盱眙县' }, { 'value': '320829', 'text': '洪泽县' }, { 'value': '320826', 'text': '涟水县' }, { 'value': '320811', 'text': '清浦区' }, { 'value': '320804', 'text': '淮阴区' }, { 'value': '320803', 'text': '楚州区' }, { 'value': '320802', 'text': '清河区' }] },
-    { 'value': '3209', 'text': '盐城市', children: [{ 'value': '320900', 'text': '全部' }, { 'value': '320904', 'text': '开发区' }, { 'value': '320982', 'text': '大丰市' }, { 'value': '320981', 'text': '东台市' }, { 'value': '320925', 'text': '建湖县' }, { 'value': '320924', 'text': '射阳县' }, { 'value': '320923', 'text': '阜宁县' }, { 'value': '320922', 'text': '滨海县' }, { 'value': '320921', 'text': '响水县' }, { 'value': '320903', 'text': '盐都区' }, { 'value': '320902', 'text': '亭湖区' }] },
-    { 'value': '3210', 'text': '扬州市', children: [{ 'value': '321000', 'text': '全部' }, { 'value': '321004', 'text': '开发区' }, { 'value': '321088', 'text': '江都市' }, { 'value': '321084', 'text': '高邮市' }, { 'value': '321081', 'text': '仪征市' }, { 'value': '321023', 'text': '宝应县' }, { 'value': '321011', 'text': '维扬区' }, { 'value': '321003', 'text': '邗江区' }, { 'value': '321002', 'text': '广陵区' }] },
-    { 'value': '3211', 'text': '镇江市', children: [{ 'value': '321100', 'text': '全部' }, { 'value': '321183', 'text': '句容市' }, { 'value': '321182', 'text': '扬中市' }, { 'value': '321181', 'text': '丹阳市' }, { 'value': '321113', 'text': '大港新区' }, { 'value': '321112', 'text': '丹徒区' }, { 'value': '321111', 'text': '润州区' }, { 'value': '321102', 'text': '京口区' }] },
-    { 'value': '3212', 'text': '泰州市', children: [{ 'value': '321200', 'text': '全部' }, { 'value': '321284', 'text': '姜堰市' }, { 'value': '321283', 'text': '泰兴市' }, { 'value': '321282', 'text': '靖江市' }, { 'value': '321281', 'text': '兴化市' }, { 'value': '321203', 'text': '高港区' }, { 'value': '321202', 'text': '海陵区' }] },
-    { 'value': '3213', 'text': '宿迁市', children: [{ 'value': '321300', 'text': '全部' }, { 'value': '321324', 'text': '泗洪县' }, { 'value': '321323', 'text': '泗阳县' }, { 'value': '321322', 'text': '沭阳县' }, { 'value': '321311', 'text': '宿豫区' }, { 'value': '321302', 'text': '宿城区' }] }
-];
+var CityData = new Function();
+// 初始化城市
+CityData.initCities = function(selectId) {
+    $.get(BizAPI + "allCityName/", function(cities){
+        if(cities && cities.length > 0) {
+            var opts = '<option value="">请选择城市</option>';
+            for (var i = 0; i < cities.length; i++) {
+                opts += '<option value="' + cities[i].value + '">' + cities[i].name + '</option>';
+            }
+            var sel = document.getElementById(selectId);
+            sel.innerHTML = opts;
+        }
+    })
+}
+// 根据城市code获取下级区县
+CityData.initCounties = function(cityCode, selectId) {
+    $.get(BizAPI + "allTownName/" + cityCode, function(counties){
+        if(counties && counties.length > 0) {
+            var opts = '<option value="">请选择地区</option>';
+            for (var i = 0; i < counties.length; i++) {
+                opts += '<option value="' + counties[i].value + '">' + counties[i].name + '</option>';
+            }
+            var sel = document.getElementById(selectId);
+            sel.innerHTML = opts;
+        }
+    })
+}
